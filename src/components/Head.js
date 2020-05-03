@@ -4,7 +4,7 @@ const CopyInput = require('./CopyInput');
 const Head = () => {
   const DomElement = html`
     <div class="head">
-      <img src="/media/logo.svg">
+      <img src="./media/logo.svg">
       <p>
         noFramework.js is a list of small javascript 
         functions that help you write almost pure javascript.
