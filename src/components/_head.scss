@@ -1,0 +1,24 @@
+@use './copyInput';
+@use '../colors';
+
+.head {
+  background-color: colors.$background-head;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+
+  p {
+    text-align: center;
+    font-size: 1em;
+    max-width: 500px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+
+  img {
+    max-height: 20vh;
+    max-width: 80vw;
+  }
+}

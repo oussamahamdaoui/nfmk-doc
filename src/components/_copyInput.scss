@@ -1,0 +1,31 @@
+@use '../colors';
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
+
+.copy-input {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  border: 1px solid colors.$black;
+  background-color: colors.$white;
+
+  .value {
+    padding: 13px;
+    font-family: "PT Mono", monospace;
+    border: none;
+    outline: none;
+    width: 270px;
+    font-size: 1em;
+    &::selection {
+      background-color: transparent;
+    }
+  }
+
+  button {
+    height: 100%;
+    width: 70px;
+    border: none;
+    background-color: colors.$highlight;
+    color: colors.$black;
+    outline: none;
+  }
+}

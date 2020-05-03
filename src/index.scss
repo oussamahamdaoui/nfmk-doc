@@ -1,0 +1,18 @@
+@use './components/head';
+@use './components/markdown';
+@use './components/footer';
+@use 'colors';
+
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Sans+Narrow:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: colors.$black;
+}
