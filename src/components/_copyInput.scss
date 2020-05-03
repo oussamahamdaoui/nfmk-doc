@@ -7,6 +7,7 @@
   align-items: center;
   border: 1px solid colors.$black;
   background-color: colors.$white;
+  cursor: pointer;
 
   .value {
     padding: 13px;
@@ -15,6 +16,7 @@
     outline: none;
     width: 270px;
     font-size: 1em;
+    cursor: pointer;
     &::selection {
       background-color: transparent;
     }
@@ -27,5 +29,6 @@
     background-color: colors.$highlight;
     color: colors.$black;
     outline: none;
+    cursor: pointer;
   }
 }

@@ -1,5 +1,6 @@
 const { html } = require('@forgjs/noframework');
 const CopyInput = require('./CopyInput');
+const Icon = require('./Icon');
 
 const Head = () => {
   const DomElement = html`
@@ -11,6 +12,10 @@ const Head = () => {
         This documentation was build using noFramework.js 😜
       </p>
       ${CopyInput('> npm i @forgjs/noframework')}
+      <a href="https://github.com/oussamahamdaoui/noframework.js">
+        ${Icon('github')}
+        View on Github
+      </a>
     </div>
   `;
 

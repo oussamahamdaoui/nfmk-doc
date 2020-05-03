@@ -21,4 +21,18 @@
     max-height: 20vh;
     max-width: 80vw;
   }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: colors.$highlight;
+    color: colors.$black;
+    text-decoration: none;
+    border-radius: 3px;
+    svg {
+      margin-right: 5px;
+    }
+  }
 }
