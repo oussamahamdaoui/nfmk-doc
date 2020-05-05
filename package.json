@@ -9,7 +9,7 @@
     "watch-js": "watchify -t brfs src/index.js -o docs/index.js",
     "front-dev": "concurrently \"npm:watch-css\"  \"npm:watch-js\" ",
     "watch": "concurrently \"npm:watch-*\"",
-    "build-js": "browserify src/index.js -o docs/index.js -p tinyify",
+    "build-js": "browserify src/index.js -o docs/index.js -p tinyify -t brfs",
     "build-css": "sass src/.:docs/ --style compressed",
     "build": "concurrently \"npm:build-*\""
   },
