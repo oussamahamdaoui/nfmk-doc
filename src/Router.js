@@ -4,8 +4,8 @@ const Docs = require('./Docs');
 const Examples = require('./Examples');
 
 
-const router = new Router(GlobalEvents, '/');
-router.set('/', Docs());
-router.set('/examples', Examples());
+const router = new Router(GlobalEvents, '/nfmk-doc/');
+router.set('/nfmk-doc/', Docs());
+router.set('/nfmk-doc/examples', Examples());
 
 module.exports = router;
