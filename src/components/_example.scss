@@ -1,0 +1,84 @@
+@use '../../node_modules/highlight.js/scss/atom-one-dark.scss';
+@use '../colors';
+
+.example {
+  padding: 1em;
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .selected-item {
+    background-color: colors.$highlight;
+  }
+
+  &.preview {
+    .preview {
+      @extend .selected-item;
+    }
+    .component {
+      margin-left: 0%;
+    }
+  }
+
+  &.see-javascript {
+    .see-javascript {
+      @extend .selected-item;
+    }
+    .component {
+      margin-left: -100%;
+    }
+  }
+
+  &.see-scss {
+    .see-scss {
+      @extend .selected-item;
+    }
+    .component {
+      margin-left: -200%;
+    }
+  }
+
+  .tabs {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 3px;
+
+    pre {
+      @extend .hljs;
+      min-width: 100%;
+      padding: 15px;
+    }
+
+    .component {
+      min-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: colors.$background-head;
+      transition: margin-left 500ms ease-in-out;
+    }
+  }
+
+  .nav {
+    right: 5px;
+    top: 5px;
+
+    button {
+      padding: 9px 9px;
+      border: none;
+      outline: none;
+      color: colors.$black;
+      cursor: pointer;
+      border-radius: 3px 3px 0px 0px;
+
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}

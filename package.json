@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch-css": "sass --watch src/.:docs/",
-    "watch-js": "watchify src/index.js -o docs/index.js",
+    "watch-js": "watchify -t brfs src/index.js -o docs/index.js",
     "front-dev": "concurrently \"npm:watch-css\"  \"npm:watch-js\" ",
     "watch": "concurrently \"npm:watch-*\"",
     "build-js": "browserify src/index.js -o docs/index.js -p tinyify",
@@ -24,6 +24,7 @@
     "@babel/preset-env": "^7.7.7",
     "babel-polyfill": "^6.26.0",
     "babelify": "^10.0.0",
+    "brfs": "^2.0.2",
     "browserify": "^16.5.0",
     "concurrently": "^5.0.2",
     "eslint": "^6.8.0",

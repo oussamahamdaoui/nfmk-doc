@@ -9,8 +9,12 @@ const CopyInput = (text) => {
 
   DomElement.addEventListener('click', () => {
     const copyText = $('.value', DomElement);
-    copyText.select(1);
-    copyText.setSelectionRange(1, 99999);
+    let start = 0;
+    if (copyText.value[0] === '>') {
+      start = 1;
+    }
+    copyText.select(start);
+    copyText.setSelectionRange(start, 99999);
     document.execCommand('copy');
   });
 

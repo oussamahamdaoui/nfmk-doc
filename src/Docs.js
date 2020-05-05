@@ -1,14 +1,12 @@
 const { html } = require('@forgjs/noframework');
-const Head = require('./components/Head');
 const Markdown = require('./components/Markdown');
 
-const HelloPage = () => {
-  const DomElement = html`<div>
-    ${Head()}
+const Docs = () => {
+  const DomElement = html`<div class="docs">
     ${Markdown()}
   </div>`;
 
   return DomElement;
 };
 
-module.exports = HelloPage;
+module.exports = Docs;

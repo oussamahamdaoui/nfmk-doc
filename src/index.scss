@@ -2,12 +2,60 @@
 @use './components/markdown';
 @use './components/footer';
 @use 'colors';
+@use './components/example';
+@use './components/navigation';
+@use './components/code';
 
 @import url("https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Sans+Narrow:wght@700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-family: "PT Sans Narrow";
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  position: relative;
+  display: inline-block;
+  color: colors.$black;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: colors.$highlight;
+  }
+}
+
+html,
+body {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+h3 {
+  font-family: "PT Sans Narrow";
+  margin-bottom: 20px;
+  font-size: 1.7em;
+  margin-top: 10px;
+  position: relative;
+  display: inline-block;
+  color: colors.$black;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: colors.$highlight;
+  }
 }
 
 .app {
@@ -15,4 +63,18 @@
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   color: colors.$black;
+}
+
+.docs {
+  .markdown {
+    p {
+      &:first-of-type {
+        display: none;
+      }
+    }
+
+    h1 {
+      display: none;
+    }
+  }
 }

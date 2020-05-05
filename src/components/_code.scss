@@ -1,0 +1,41 @@
+@use '../colors';
+@use '../../node_modules/highlight.js/scss/atom-one-dark.scss';
+
+pre {
+  align-self: stretch;
+
+  code {
+    @extend .hljs;
+    padding: 15px;
+    border-radius: 3px;
+    font-family: "PT Mono", monospace;
+    position: relative;
+
+    .copy-text {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      z-index: 3;
+      background-color: colors.$highlight;
+      color: colors.$black;
+      display: flex;
+      overflow: hidden;
+      padding: 9px 9px;
+      border-radius: 3px;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+
+      textarea {
+        position: absolute;
+        left: -100%;
+        top: -100%;
+      }
+    }
+  }
+}

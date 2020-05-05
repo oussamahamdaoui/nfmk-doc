@@ -1,8 +1,11 @@
-const GlobalEvents = require('./GlobalEvents');
 const { Router } = require('@forgjs/noframework');
-const HelloPage = require('./HelloPage');
+const GlobalEvents = require('./GlobalEvents');
+const Docs = require('./Docs');
+const Examples = require('./Examples');
 
-const router = new Router(GlobalEvents, '/hello');
-router.set('/hello', HelloPage());
+
+const router = new Router(GlobalEvents, '/');
+router.set('/', Docs());
+router.set('/examples', Examples());
 
 module.exports = router;
