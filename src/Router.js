@@ -5,7 +5,7 @@ const Examples = require('./Examples');
 
 
 const router = new Router(GlobalEvents, '/nfmk-doc/');
-router.set('/nfmk-doc', Docs());
-router.set('/nfmk-doc/examples', Examples());
+router.set('/nfmk-doc/', Docs());
+router.set('/nfmk-doc/examples/', Examples());
 
 module.exports = router;

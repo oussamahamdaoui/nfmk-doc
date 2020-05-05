@@ -4,8 +4,8 @@ const GlobalEvents = require('../GlobalEvents');
 
 const Navigation = () => {
   const DomElement = html`<nav>
-    ${Link('/nfmk-doc', html`<a href="/" class="selected">Doc</a>`)}
-    ${Link('/nfmk-doc/examples', html`<a href="/examples" >Examples</a>`)}
+    ${Link('/nfmk-doc/', html`<a href="/" class="selected">Doc</a>`)}
+    ${Link('/nfmk-doc/examples/', html`<a href="/examples" >Examples</a>`)}
   </nav>`;
 
   GlobalEvents.subscribe('rerouted', (url) => {
