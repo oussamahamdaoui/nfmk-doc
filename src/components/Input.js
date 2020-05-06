@@ -1,6 +1,9 @@
 const { html, $ } = require('@forgjs/noframework');
-const { objToProps } = require('../utils');
 const Icon = require('./Icon');
+
+const camelCaseToSnake = (str) => str.replace(/([A-Z])/g, '-$1').toLowerCase();
+
+const objToProps = (obj) => Object.keys(obj).map((key) => `${camelCaseToSnake(key)}="${escape(obj[key])}"`).join(' ');
 
 const Input = ({
   icon,
