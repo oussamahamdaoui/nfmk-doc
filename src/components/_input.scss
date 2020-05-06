@@ -1,0 +1,107 @@
+@use '../colors';
+@use '../animations';
+
+.input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid colors.$light-grey;
+  margin-bottom: 10px;
+  padding: 5px;
+  padding-left: 10px;
+  background-color: colors.$light;
+  border-radius: 3px;
+  cursor: text;
+
+  &.with-icon {
+    padding-left: 35px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    input {
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+    label {
+      display: none;
+    }
+    svg {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      stroke-width: 3px;
+    }
+  }
+
+  &.shake {
+    animation: shake 300ms ease-in-out 1;
+  }
+
+  &.error {
+    &:focus-within.hasValue {
+      border: 1px solid colors.$error;
+    }
+
+    border: 1px solid colors.$error;
+    label {
+      color: colors.$error;
+    }
+    &.hasValue {
+      border: 1px solid colors.$error;
+      label {
+        color: colors.$error;
+      }
+    }
+  }
+
+  &.hasValue {
+    &:focus-within {
+      border: 1px solid colors.$selected;
+    }
+    label {
+      color: colors.$lightest-grey;
+      transform: translateY(-90%) scale(0.8);
+      font-size: 0.8em;
+    }
+  }
+
+  label {
+    color: colors.$dark;
+    top: 1.5em;
+    position: absolute;
+    font-size: 0.8em;
+    transition: all 250ms ease-in-out;
+    pointer-events: none;
+    transform-origin: center left;
+  }
+
+  textarea {
+    height: 200px;
+    background-color: transparent;
+    color: colors.$dark;
+    border: none;
+    outline: none;
+    padding-top: 20px;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    font-size: 1.1em;
+    resize: none;
+  }
+
+  input {
+    border-radius: 0;
+    display: block;
+    border: none;
+    width: 100%;
+    margin-top: 15px;
+    padding-bottom: 0.1em;
+    font-size: 1.1em;
+    padding-left: 0.1em;
+    outline: none;
+    color: colors.$dark;
+    background-color: transparent;
+  }
+}
